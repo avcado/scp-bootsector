@@ -8,3 +8,6 @@ compile:
 
 run:
 	$(QEMU) -fda bin/scpb.bin
+
+cleanup:
+	rm -rf bin
