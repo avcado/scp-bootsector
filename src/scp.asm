@@ -1,8 +1,5 @@
 [org 0x7c00]
 
-xor ax, ax
-int 16h
-
 mov bx, bootMsg
 call printf
 
@@ -20,7 +17,7 @@ jmp $
 %include "src/game.asm"
 
 bootMsg:
-    db 'Press any key to start.', 0
+    db 'Press any key to start. ', 0
 
 times 510-($-$$) db 0
 dw 0xaa55

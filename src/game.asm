@@ -24,13 +24,35 @@
 
 ; Game logic
 game:
-    ; Just a test
-    mov bx, test
+
+    ; Before we ask for input
+    mov bx, starting
     call printf
+
+    mov bx, askForInput
+    call printf
+
+    xor ax, ax
+    int 16h
+
+    ; TODO: process keystrokes,
+    ; render map, and move player
+    ; according to keystrokes
+    ; e.g. W -> forward, A -> left, etc.
+
+    ; We will need ret.
     ret
 
-test:
-    db 'asdf', 0
+
+; This has to do with when we
+; start the game, this message appears
+; so it doesn't seem like we need to
+; input twice, for one thing.
+starting:
+    db 'Starting! ', 0
+
+askForInput:
+    db 'Waiting for input... ', 0
 
 
 ; Includes
