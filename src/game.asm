@@ -29,12 +29,8 @@ game:
     mov bx, starting
     call printf
 
-    mov bx, askForInput
-    call printf
-
     xor ax, ax
     int 16h
-
     ; TODO: process keystrokes,
     ; render map, and move player
     ; according to keystrokes
@@ -51,9 +47,6 @@ game:
 starting:
     db 'Starting! ', 0
 
-askForInput:
-    db 'Waiting for input... ', 0
-
 
 ; This has to do with the characters
 ; we will use to display the map
@@ -63,3 +56,10 @@ ground:
 
 wall:
     db '#', 0
+
+; Position
+xPos:
+    dw 0
+
+yPos:
+    dw 0
