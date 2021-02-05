@@ -1,16 +1,23 @@
 [org 0x7c00]
-int 10h
+
+xor ax, ax
+int 16h
+
 mov bx, bootMsg
 call printf
 
 xor ax, ax
 int 16h
 
-; TODO: Call the start game
+; Now we call the game logic
+; this will essentially render everything
+;
+call game
 
-; jmp $
+jmp $
 
 %include "src/print.asm"
+%include "src/game.asm"
 
 bootMsg:
     db 'Press any key to start.', 0
