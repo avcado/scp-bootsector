@@ -53,3 +53,13 @@ starting:
 
 askForInput:
     db 'Waiting for input... ', 0
+
+
+; This has to do with the characters
+; we will use to display the map
+
+ground:
+    db '.', 0
+
+wall:
+    db '#', 0
