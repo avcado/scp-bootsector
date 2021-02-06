@@ -31,6 +31,9 @@ game:
 
     xor ax, ax
     int 16h
+
+    mov bx, ax
+    call printf 
     ; TODO: process keystrokes,
     ; render map, and move player
     ; according to keystrokes
@@ -57,9 +60,12 @@ ground:
 wall:
     db '#', 0
 
-; Position
+; Position of the player
 xPos:
     dw 0
 
 yPos:
     dw 0
+
+; Includes
+%include "src/getMaps.asm"
