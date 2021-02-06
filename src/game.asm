@@ -29,11 +29,11 @@ game:
     mov bx, starting
     call printf
 
-    xor ax, ax
+    mov ah, 00h
     int 16h
+    cmp al, 51
+    je poggers
 
-    mov bx, ax
-    call printf 
     ; TODO: process keystrokes,
     ; render map, and move player
     ; according to keystrokes

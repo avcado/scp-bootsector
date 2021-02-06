@@ -5,3 +5,9 @@
 ; the source code) or
 ; user-made.
 
+poggers:
+    mov bx, po
+    call printf
+
+po:
+    db '1lmfao', 0
