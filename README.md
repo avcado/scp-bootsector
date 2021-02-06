@@ -12,6 +12,9 @@ make run
 
 You need QEMU.
 
+# Notice
+Currently as of Februrary 6, 2021, the bootsector will boot up and print "Starting!"
+
 
 # Obligatory CC-BY-SA disclaimer
 
