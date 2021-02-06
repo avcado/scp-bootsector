@@ -25,19 +25,11 @@
 ; Game logic
 game:
 
-    ; Before we ask for input
-    mov bx, starting
-    call printf
-
-    mov ah, 00h
-    int 16h
-    cmp al, 51
-    je poggers
-
     ; TODO: process keystrokes,
     ; render map, and move player
     ; according to keystrokes
-    ; e.g. W -> forward, A -> left, etc.
+    ; e.g. W -> forward, A -> left, etc
+    
 
     ; We will need ret.
     ret
@@ -66,6 +58,3 @@ xPos:
 
 yPos:
     dw 0
-
-; Includes
-%include "src/getMaps.asm"
